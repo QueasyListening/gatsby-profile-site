@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(44, 44, 44);
+    overflow: hidden;
+    
+}
+
+.start-btn {
+    width: 350px;
+    height: 150px;
+    background-color:rgb(44, 44, 44);
+    color: #e2725b;
+    border: 1px solid #e2725b;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+.width-100-container {
+    width: 100%;
+}
