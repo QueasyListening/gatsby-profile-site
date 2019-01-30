@@ -4,19 +4,22 @@ import './flower.css'
 class Flower extends Component {
     constructor(props){
         super(props);
+
+        this.flower = React.createRef()
     }
+    
     componentDidMount() {
         window.setTimeout(() => {
-            document.getElementsByClassName('flower-container')[0].style.height = this.props.height.toString()+'%';
-            document.getElementsByClassName('flower-container')[0].style.bottom = this.props.bottom.toString()+'px';
-            document.getElementsByClassName('flower-container')[0].style.left = this.props.left.toString()+'px';
+            this.flower.current.style.height = this.props.height.toString()+'%';
+            this.flower.current.style.bottom = this.props.bottom.toString()+'px';
+            this.flower.current.style.left = this.props.left.toString()+'px';
         }, 5);
 
         window.setTimeout(() => this.grow(), 1000);
 
     }
     displayFlower = () => {
-        const droplets = Array.from(document.getElementsByClassName('droplet'));
+        const droplets = Array.from(this.flower.current.getElementsByClassName('droplet'));
        
         droplets.forEach(droplet => {
             droplet.style.height = this.props.flowerSize.toString()+'px';
@@ -26,7 +29,7 @@ class Flower extends Component {
     }
 
     displayLeaves = () => {
-        const leaves = Array.from(document.getElementsByClassName('leaf'));
+        const leaves = Array.from(this.flower.current.getElementsByClassName('leaf'));
         leaves.forEach( (leaf, i) => {
             leaf.style.transform = 'scale(1)';
             if (i % 2 === 0) {
@@ -43,7 +46,7 @@ class Flower extends Component {
     grow = () => {
         const stemHeight = window.innerHeight * this.props.height * .01 - 64 - 140;
                 
-        let stems = Array.from(document.getElementsByClassName('stem'));
+        let stems = Array.from(this.flower.current.getElementsByClassName('stem'));
         stems.forEach(stem => {
             stem.style.height = stemHeight.toString()+'px';
             
@@ -54,8 +57,9 @@ class Flower extends Component {
     }
 
     render(){
+        
         return (
-            <div className="flower-container">
+            <div className="flower-container" ref={this.flower}>
                 <div className="droplet" id="no1"></div>
                 <div className="droplet" id="no2"></div>
                 <div className="droplet" id="no3"></div>

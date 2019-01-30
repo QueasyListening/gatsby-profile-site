@@ -36,7 +36,7 @@ const MainPage = () => {
     return (    
         <div className='main-page-container'>
             <Navbar changePage={changePage}/>
-            <Flower height={85} flowerSize={75} bottom={141} left={-42} growOnPageLoad={true}/>
+            <Flower height={85} flowerSize={75} bottom={141} left={-42} growOnPageLoad={true} id={0}/>
             
             <h1 className='page-title page-title-intro'><div className='trapezoid'></div>Introduction</h1>
             <div className='jumbo-bubble first-bubble '>

@@ -54,6 +54,7 @@ h1, h2 {
     border: 5px solid black;
 }
 
+
 @keyframes shrink {
     0% {
         transform: scale(1);
@@ -205,5 +206,10 @@ footer {
         font-size: 5rem;
         left: 215px;
         margin-top: 80px;
+    }
+
+    .trapezoid {
+        height: 101px;
+        width: 75px;
     }
 }
