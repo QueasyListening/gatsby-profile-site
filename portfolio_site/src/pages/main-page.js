@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFile, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import selfPic from '../images/self_pic_circle.png';
+import resume from '../../public/resume/Josh Coyne Resume.pdf';
 
 let pageNumber = 0;
 
@@ -40,11 +41,16 @@ const MainPage = () => {
             
             <h1 className='page-title page-title-intro'><div className='trapezoid'></div>Introduction</h1>
             <div className='jumbo-bubble first-bubble '>
-                <div className='bubble-content'>
+                <div className='bubble-header'>
                     <h2 className='bubble-title'>Josh Coyne - Software Developer</h2>
-                    <p className='bubble-text'>Hello and thanks for taking the time to take a look at my website! </p> 
+                    <img className='selfie' src={selfPic}></img>
                 </div>
-                <img className='selfie' src={selfPic}></img>
+                    <p className='bubble-text'>
+                    Hello and thanks for taking the time to take a look at my website!
+                    I am a creative and hardworking Full Stack Developer with experience using a variety of languages, frameworks and technologies to build dynamic, interactive, fully responsive full stack web applications. I'm familiar with a variety of database and back end technologies and have worked on all sides of professional web development and deployment. I am always working to learn new technologies as well as to practice and improve upon the skills that I already have. I’m a problem solver who isn’t intimidated by a new challenge even if it involves tech that I’m not familiar with. I am passionate about coding and using technology to make people lives easier.
+                    I am also a professional, friendly and positive person with good communication skills and a team player's attitude. I'm reliable and a fast learner that’s always excited to take on new challenges.
+                    Feel free to contact me with any questions, comments, or opportunities. I'd love to hear from you!</p> 
+                
             </div>
             <h1 className='page-title'><div className='trapezoid'></div>Project<div className='s'>s</div></h1>
             <div className='jumbo-bubble'>
@@ -71,7 +77,7 @@ const MainPage = () => {
                 <div className='footer-item personal-links'>
                     <a href='https://www.linkedin.com/in/josh-coyne' className='personal-links-item'><FontAwesomeIcon className='footer-icon fa-lg fa-fw' icon={faLinkedin}/>www.linkedin.com/in/josh-coyne</a>
                     <a href='https://github.com/joshuacoyne' className='personal-links-item'><FontAwesomeIcon className='footer-icon fa-lg fa-fw' icon={faGithub}/>github.com/joshuacoyne</a>
-                    <a href='' className='personal-links-item'><FontAwesomeIcon className='footer-icon fa-lg fa-fw' icon={faFile}/>Resume</a>
+                    <a href={resume} className='personal-links-item'><FontAwesomeIcon className='footer-icon fa-lg fa-fw' icon={faFile}/>Resume</a>
                 </div>
                 <div className='footer-item personal-info'>
                     <div className='personal-info-item'>Josh Coyne</div>

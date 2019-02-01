@@ -12,7 +12,7 @@ body {
     background-color:rgb(44, 44, 44);
     color: #e2725b;
     border: 1px solid #e2725b;
-    margin: 25% auto;
+    margin: 15% auto;
     border-radius: 5px;
     z-index: 1;
     transition: opacity 1s;

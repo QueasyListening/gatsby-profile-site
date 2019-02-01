@@ -111,8 +111,8 @@ h1, h2 {
     visibility: hidden;
     transform: scale(.01);
     justify-content: space-between;
-    flex-wrap: wrap
-    
+    flex-wrap: wrap;
+    font-size: .95rem;
 }
 
 .first-bubble {
@@ -122,23 +122,26 @@ h1, h2 {
 
 .first-bubble p {
     width: 100%;
+    margin-bottom: 0;
+    margin-top: 15px;
 }
 
-.bubble-content {
-    height: 100%;
+.bubble-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.selfie-container {
-    height: 100%;
-    width:25%;
-}
 
 .selfie {
-    height: 45%;
+    max-height: 100px;
+    max-width: 100px;
     -webkit-filter: brightness(2);
     filter: brightness(2);
     border: 5px solid black;
     border-radius: 100%;
+    margin-top: -27px;
+    margin-bottom: 0;
 }
 .next-btn {
     position: absolute;
@@ -188,9 +191,17 @@ footer {
     color: rgb(44, 44, 44);
 }
 
+.personal-info {
+    align-items: center;
+}
+
 .personal-info-item {
     margin: 4px 0;
     color: rgb(44, 44, 44);
+}
+
+.project-links {
+    align-items: center;
 }
 
 .project-links-item {

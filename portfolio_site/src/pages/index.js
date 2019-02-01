@@ -48,7 +48,7 @@ const start = () => {
 
     window.setTimeout(() => {
         navigate('/main-page/');
-    }, 15000);
+    }, 12000);
 }
 
 const IndexPage = () => {
@@ -58,7 +58,7 @@ const IndexPage = () => {
             <div className='width-100-container'>
                 {flowerBed.map(flower => flower)}
             </div>
-            <button className='start-btn' ref={startBtn} onClick={start}>Here we go</button>
+            <button className='start-btn' ref={startBtn} onClick={start}>Let's get Started!</button>
         </div>
     )
 
