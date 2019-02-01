@@ -21,6 +21,7 @@
     left: 50%;
     transform-origin: left top;
     opacity: 0;
+    z-index: 0;
 
 }
 
@@ -242,7 +243,6 @@
     width: 10px; 
     position: absolute;
     bottom: 58px;
-    z-index: -2;
     border: 2px solid darkgreen;
     transition: all 2s;
     transition-property: height, top;
@@ -256,8 +256,7 @@
     bottom: 47px;
     border-radius: 20%;
     border: 2px solid brown;
-    z-index: 2;
-   
+    z-index: 0;
 }
 
 .pot:after {
@@ -283,6 +282,7 @@
     display: inline-block;
     position: absolute;
     bottom: 0px;
+    z-index: 0;
 }
 
 .leaf {
@@ -294,6 +294,7 @@
     border-radius: 5px 90%;
     transform: scale(0.01);
     transition: all 1s ease-out;
+    z-index: 0;
 }
 
 .leaf-1 {

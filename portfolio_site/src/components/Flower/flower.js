@@ -13,9 +13,19 @@ class Flower extends Component {
             this.flower.current.style.height = this.props.height.toString()+'%';
             this.flower.current.style.bottom = this.props.bottom.toString()+'px';
             this.flower.current.style.left = this.props.left.toString()+'px';
+            let droplets = Array.from(this.flower.current.getElementsByClassName('droplet'));
+            
+            droplets.forEach((droplet, i) => {
+                if (i % 2)
+                    droplet.style.backgroundColor = this.props.colorSet[1];
+                else
+                    droplet.style.backgroundColor = this.props.colorSet[0];
+            });
+            
         }, 5);
 
-        window.setTimeout(() => this.grow(), 1000);
+        if (this.props.growOnPageLoad)
+            this.grow();
 
     }
     displayFlower = () => {
@@ -41,25 +51,29 @@ class Flower extends Component {
             }
         });
       
-    }
+    };
 
     grow = () => {
         const stemHeight = window.innerHeight * this.props.height * .01 - 64 - 140;
-                
-        let stems = Array.from(this.flower.current.getElementsByClassName('stem'));
-        stems.forEach(stem => {
+        let stem = this.flower.current.getElementsByClassName('stem')[0];
+        window.setTimeout(() => {
             stem.style.height = stemHeight.toString()+'px';
-            
-        });
-
-        window.setTimeout(this.displayFlower, 1800);
-        window.setTimeout(this.displayLeaves, 1500);
-    }
+        
+            window.setTimeout(this.displayFlower, 1800);
+            window.setTimeout(this.displayLeaves, 1500);
+        }, this.props.delay || 1000);
+    };
 
     render(){
         
         return (
             <div className="flower-container" ref={this.flower}>
+                <div className="stem">
+                    <div className="leaf leaf-1"></div>
+                    <div className="leaf leaf-2"></div>
+                
+                </div>
+                <div className="pot-outline"></div>
                 <div className="droplet" id="no1"></div>
                 <div className="droplet" id="no2"></div>
                 <div className="droplet" id="no3"></div>
@@ -70,14 +84,8 @@ class Flower extends Component {
                 <div className="droplet" id="no8"></div>
                 <div className="droplet" id="no9"></div>
                 <div className="droplet" id="no10"></div>
-    
-                <div className="stem">
-                    <div className="leaf leaf-1"></div>
-                    <div className="leaf leaf-2"></div>
-                
-                </div>
-                <div className="pot-outline"></div>
                 <div className="pot" onClick={this.grow}></div>
+    
             </div>
         )
 

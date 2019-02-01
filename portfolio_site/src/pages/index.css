@@ -1,6 +1,8 @@
 body {
     background-color: rgb(44, 44, 44);
     overflow: hidden;
+    position: relative;
+    height: 100vh;
     
 }
 
@@ -10,10 +12,14 @@ body {
     background-color:rgb(44, 44, 44);
     color: #e2725b;
     border: 1px solid #e2725b;
-    margin: 30px auto;
+    margin: 25% auto;
     border-radius: 5px;
+    z-index: 1;
+    transition: opacity 1s;
+    
 }
 
 .width-100-container {
     width: 100%;
+    
 }
