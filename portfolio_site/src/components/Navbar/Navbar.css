@@ -20,7 +20,10 @@
     top: 50px;
     overflow-x: hidden;
     transition: all .5s ease-out;
+}
 
+.pull-tab:hover {
+    cursor: pointer;
 }
 
 .hamburger-line {

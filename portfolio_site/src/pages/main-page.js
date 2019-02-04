@@ -8,6 +8,8 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFile, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import selfPic from '../images/self_pic_circle.png';
 import resume from '../../public/resume/Josh Coyne Resume.pdf';
+import quillyPic from '../images/quilly.png';
+import forgetMeKnotPic from '../images/forgetmeknot.png';
 
 let pageNumber = 0;
 
@@ -53,9 +55,26 @@ const MainPage = () => {
                 
             </div>
             <h1 className='page-title'><div className='trapezoid'></div>Project<div className='s'>s</div></h1>
-            <div className='jumbo-bubble'>
-                <h2 className='bubble-title'>Projects</h2>
-                <p className='bubble-text'>Some info here</p>
+            <div className='jumbo-bubble project-bubble'>
+                <h2 className='bubble-title project-bubble-title'>Projects</h2>
+                <a className='project-card' href='http://www.quilly.io'>
+                    <h3 className='project-title'>Quilly.io</h3>
+                    <img src={quillyPic} className='project-img'></img>
+                    <p className='project-text'>
+                    Quilly is a Web App that allows a user to manage their job search by tracking each step of the
+                    application process. Quilly has an interactive, user friendly front-end built with React and a
+                    durable back-end that utilizes Node.js, express, and MongoDB.
+                    </p>
+                </a>
+                <a className='project-card' href='http://forgetmeknot.netlify.com'>
+                    <h3 className='project-title'>Forget Me Knot</h3>
+                    <img src={forgetMeKnotPic} className='project-img'></img>
+                    <p className='project-text'>
+                    Forget me knot is a fully responsive notes application that allows a user to create, store and
+                    search notes for themselves. It is written with React, Node.js, express and MongoDB.
+
+                    </p>
+                </a>
             </div>
             <h1 className='page-title'><div className='trapezoid'></div>Background</h1>
             <div className='jumbo-bubble'>

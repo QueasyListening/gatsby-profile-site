@@ -102,6 +102,7 @@ hr {
   height: 0;
   overflow: visible;
 }
+/* Below here is CSS that effects the flowers */
 button,
 input,
 optgroup,
@@ -119,7 +120,7 @@ input {
 }
 button,
 select {
-  text-transform: none;
+  
 }
 [type='reset'],
 [type='submit'],
@@ -234,7 +235,8 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
 }
-h2 {
+/* Above here is CSS that effects the flower */
+/* h2 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -620,4 +622,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */

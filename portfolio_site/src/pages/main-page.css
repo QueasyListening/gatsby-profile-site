@@ -6,6 +6,21 @@ h1, h2 {
     font-family: 'Oswald', sans-serif;
 }
 
+p {
+    font-size: 1.4vh;
+    line-height: 1.6;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
 .main-page-container {
     padding: 50px 100px;
     height: 100vh;
@@ -101,7 +116,7 @@ h1, h2 {
     background-color: #e6f3ff;
     opacity: .5;
     border-radius: 40px;
-    padding: 50px;
+    padding: 10px 50px;
     position: absolute;
     right: 225px;
     top: 240px;
@@ -113,17 +128,21 @@ h1, h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: .95rem;
+    z-index: 1;
 }
 
 .first-bubble {
     transform: scale(1);
-    visibility: visible;    
+    visibility: visible;
+    padding: 50px;    
 }
 
 .first-bubble p {
     width: 100%;
     margin-bottom: 0;
     margin-top: 15px;
+    font-size: 1vw;
+    line-height: 1.6;
 }
 
 .bubble-header {
@@ -143,6 +162,49 @@ h1, h2 {
     margin-top: -27px;
     margin-bottom: 0;
 }
+
+.project-bubble {
+    justify-content: left;
+}
+
+.project-bubble-title {
+    width: 100%;
+}
+
+.project-card {
+    width: 30%;
+    height: 75%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 0 25px;
+    box-shadow: 2px 2px 2px;
+    text-decoration: none;
+    color: black;
+    transition: transform .3s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-size: 1.5vh;
+    margin: 0;
+}
+
+.project-img {
+    margin: 0;
+    height: 35%;
+}
+
+.project-text {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 1px 0 1px;
+}
+
 .next-btn {
     position: absolute;
     right: 30px;
@@ -156,6 +218,7 @@ h1, h2 {
     border-radius: 5px;
     padding: 16px;
     color: green;
+    
 }
 
 footer {
