@@ -5,6 +5,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: rgb(44, 44, 44);
 }
 article,
 aside,
@@ -236,7 +237,7 @@ h1 {
   line-height: 1.1;
 }
 /* Above here is CSS that effects the flower */
-/* h2 {
+h2 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -622,4 +623,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-} */
+}

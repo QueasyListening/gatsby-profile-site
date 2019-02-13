@@ -52,12 +52,12 @@
 }
 
 .border-cover {
-    height: 90px;
-    width: 5px;
+    height: 88.5px;
+    width: 6px;
     position: absolute;
-    top: 50px;
+    top: 51px;
     background-color: green;
-    right: 185px;
+    right: 184px;
     transition: all .5s ease-out;
     z-index: 3;
 }

@@ -8,7 +8,7 @@ body {
 
 *:focus {
     outline: 0;
-  }
+}
 
 .start-btn {
     width: 350px;

@@ -54,14 +54,16 @@ class Flower extends Component {
     };
 
     grow = () => {
-        const stemHeight = window.innerHeight * this.props.height * .01 - 64 - 140;
-        let stem = this.flower.current.getElementsByClassName('stem')[0];
-        window.setTimeout(() => {
-            stem.style.height = stemHeight.toString()+'px';
-        
-            window.setTimeout(this.displayFlower, 1800);
-            window.setTimeout(this.displayLeaves, 1500);
-        }, this.props.delay || 1000);
+        if (typeof window !== undefined){
+            const stemHeight = window.innerHeight * this.props.height * .01 - 64 - 140;
+            let stem = this.flower.current.getElementsByClassName('stem')[0];
+            window.setTimeout(() => {
+                stem.style.height = stemHeight.toString()+'px';
+            
+                window.setTimeout(this.displayFlower, 1800);
+                window.setTimeout(this.displayLeaves, 1500);
+            }, this.props.delay || 1000);
+        };
     };
 
     render(){
