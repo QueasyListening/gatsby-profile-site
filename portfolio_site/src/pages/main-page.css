@@ -9,6 +9,7 @@ h1, h2 {
 p {
     font-size: 1.4vh;
     line-height: 1.6;
+    font-family: 'Oswald', sans-serif;
 }
 
 a:hover {
@@ -124,11 +125,11 @@ button:hover {
     right: 225px;
     top: 200px;
     left: 200px;
-    bottom: 25%;
+    bottom: 22%;
     display: flex;
     visibility: hidden;
     transform: scale(.01);
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     font-size: .95rem;
     z-index: 1;
@@ -138,10 +139,6 @@ button:hover {
     transform: scale(1);
     visibility: visible;
     padding: 50px;    
-}
-
-.first-bubble p {
-
 }
 
 .bubble-header {
@@ -166,6 +163,10 @@ button:hover {
     font-size: 1.1vw;
     line-height: 1.6;
     font-weight: 600;
+}
+
+.about-text {
+    margin-bottom: 110px;
 }
 
 
@@ -220,6 +221,16 @@ button:hover {
     border-radius: 3px;
     padding: 5px;
     box-shadow: 1px 0 1px;
+    line-height: 1.4;
+    font-size: .9vw;
+}
+
+.tech-logo {
+    height: 65px;
+}
+
+.about-header {
+    justify-content:space-around;
 }
 
 .next-btn {

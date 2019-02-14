@@ -13,6 +13,10 @@ import quillyPic from '../images/quilly.png';
 import forgetMeKnotPic from '../images/forgetmeknot.png';
 import lambdaLogo from '../images/lambda_logo.png';
 import gatsbyLogo from '../images/gatsby-icon.png';
+import reactLogo from '../images/react.png';
+import jsLogo from '../images/javascript.png';
+import htmlLogo from '../images/html-icon.png';
+import cssLogo from '../images/css.png';
 
 const mainPageRef = React.createRef();
 
@@ -24,9 +28,10 @@ const MainPage = () => {
 
         const jumboBubbles = document.getElementsByClassName('jumbo-bubble');
         const pageTitles = document.getElementsByClassName('page-title');
-
-        if (newPageNumber > pageTitles.length)
-            newPageNumber >= 0;
+        console.log('new', newPageNumber);
+        console.log('old', pageNumber);
+        if (newPageNumber >= pageTitles.length)
+            newPageNumber = 0;
         jumboBubbles[pageNumber].style.animation = 'shrink 1s ease-out forwards';
         pageTitles[pageNumber].style.transform = 'translateX(-2000px)';
         if (typeof window !== undefined) {
@@ -85,6 +90,7 @@ const MainPage = () => {
                     </p>
                 </a>
             </div>
+            <h1 className='page-title'><div className='trapezoid'></div>Background</h1>
             <div className='jumbo-bubble'>
                 <div className='bubble-header'>
                     <h2 className='bubble-title'>Background</h2>
@@ -96,7 +102,7 @@ const MainPage = () => {
                     offered by my High School where I learned more advanced concepts in Pascal, Java, and C++. I studied computer science in college at RPI, 
                     but had to leave for peronal reasons.
                         My professional trajactory has been eclectic. I worked with contractors and home owners to spec out lighting needs. I navigated the
-                    complicated world of the healcare industry on behalf of patients and worked for a premiere medical marijuana collective helping to 
+                    complicated world of the healcare industry on behalf of patients and I worked for a premiere medical marijuana collective helping to 
                     navigate the challenges of one of the fastest changing industries on the planet. While this collection of experiences may seem disconnected,
                     the common thread in all of them is Problem Solving! When I see a difficult problem I run towards it and when I decided to return to school to make a career 
                     in computer programming, it felt like a natural progression of that mentality. </p>   
@@ -119,11 +125,17 @@ const MainPage = () => {
             </div>
             <h1 className='page-title'><div className='trapezoid'></div>About</h1>
             <div className='jumbo-bubble'>
-            <div className='bubble-header'>
-                    <h2 className='bubble-title'>About</h2>
-                    <img className='selfie' src={gatsbyLogo}></img>
+            <div className='bubble-header about-header'>
+                    <img className='tech-logo' src={gatsbyLogo}></img>
+                    <img className='tech-logo' src={reactLogo}></img>
+                    <img className='tech-logo' src={jsLogo}></img>
+                    <img className='tech-logo' src={htmlLogo}></img>
+                    <img className='tech-logo' src={cssLogo}></img>
                 </div>
-                <p className='bubble-text'>This site was built with Gatsby, a modern site generator for React.</p>
+                <p className='bubble-text about-text'>
+                This site was built with GatsbyJS, a modern site generator for React. It utilizes ReactJS, Javascript, CSS3 and HTML5.
+
+                </p>
             </div>
             <button className='next-btn' onClick={() => changePage(pageNumber+1)}>Next  <FontAwesomeIcon icon={faArrowRight} className='arrow-icon'></FontAwesomeIcon></button>
             <footer>
